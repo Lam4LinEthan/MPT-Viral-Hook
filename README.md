@@ -1,4 +1,9 @@
 <div align="center">
+<img src="https://img.shields.io/badge/⚡_Implemented-Viral_Hook_Feature-facc15?style=for-the-badge&labelColor=0f172a&color=facc15" alt="Viral Hook Feature" />
+</div>
+
+<br>
+<div align="center">
 <h1 align="center">MoneyPrinterTurbo 💸</h1>
 
 <p align="center">
