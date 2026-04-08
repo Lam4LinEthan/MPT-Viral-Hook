@@ -34,6 +34,9 @@ pixabay_api_keys = []
 #   modelscope  (魔搭社区)
 llm_provider = "openai"
 
+# Enable viral hook generation before script generation
+enable_viral_hooks = true
+
 ########## Pollinations AI Settings
 # Visit https://pollinations.ai/ to learn more
 # API Key is optional - leave empty for public access
@@ -261,3 +264,13 @@ upload_post_platforms = ["tiktok", "instagram"]
 
 # Automatically cross-post videos after generation (if false, you'll need to call the API manually)
 upload_post_auto_upload = false
+
+[supabase]
+# Supabase configuration for logging viral hook results
+# Leave empty to disable Supabase logging
+# Create a table named "viral_hooks_log" in your Supabase project with:
+#   task_id (text), video_subject (text), all_hooks (jsonb),
+#   evaluated_hooks (jsonb), selected_hook (text), selected_score (int),
+#   created_at (timestamptz default now())
+supabase_url = ""
+supabase_key = ""

@@ -17,11 +17,31 @@ def generate_script(task_id, params):
     logger.info("\n\n## generating video script")
     video_script = params.video_script.strip()
     if not video_script:
+        # --- Viral Hook Agent ---
+        viral_hook = ""
+        try:
+            from app.services.viral_hooks import run_viral_hook_pipeline
+
+            viral_hook = run_viral_hook_pipeline(
+                video_subject=params.video_subject,
+                language=params.video_language or "",
+                task_id=task_id,
+            )
+            if viral_hook:
+                logger.success(f"viral hook selected: {viral_hook}")
+        except Exception as e:
+            logger.warning(f"viral hook agent failed (non-fatal): {e}")
+        # --- End Viral Hook Agent ---
+
         video_script = llm.generate_script(
             video_subject=params.video_subject,
             language=params.video_language,
             paragraph_number=params.paragraph_number,
         )
+
+        # Prepend the winning hook as the opening line
+        if viral_hook and video_script:
+            video_script = f"{viral_hook}\n\n{video_script}"
     else:
         logger.debug(f"video script: \n{video_script}")
 

@@ -47,6 +47,7 @@ whisper = _cfg.get("whisper", {})
 proxy = _cfg.get("proxy", {})
 azure = _cfg.get("azure", {})
 siliconflow = _cfg.get("siliconflow", {})
+supabase = _cfg.get("supabase", {})
 ui = _cfg.get(
     "ui",
     {
