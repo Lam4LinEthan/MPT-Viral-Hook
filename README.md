@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://img.shields.io/badge/⚡_Implemented-Viral_Hook_Feature-facc15?style=for-the-badge&labelColor=0f172a&color=facc15" alt="Viral Hook Feature" width="400" />
+<img src="https://img.shields.io/badge/⚡_Implemented-Viral_Hook_Feature-facc15?style=for-the-badge&labelColor=0f172a&color=facc15" alt="Viral Hook Feature" width="2000" />
 </div>
 
 <br>
